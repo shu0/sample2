@@ -1,0 +1,239 @@
+@charset "utf-8";
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0 auto;
+}
+.header-list{
+    display: flex;
+    justify-content: space-around;
+    
+    list-style: none;
+}
+.header-list li:not(.li-contact){
+    padding: 10px 20px;
+}
+.header-list a:not(.contact){
+    color: #fff;
+    text-decoration: none;
+}
+.bg-header{
+    /* position: fixed; */
+    background-color: #000;
+    width: 100%;
+}
+.wrap{
+    width: 1000px;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+header{
+   
+    width: 100%;
+    
+}
+.header-logo{
+    color: #fff;
+}
+header nav{
+    margin-top: 15px;
+}
+
+.contact{
+    color: #000;
+    background-color: #fafaf0;
+    text-decoration: none;
+    padding: 1em;
+    margin-left: 5em;
+    border-radius: 10px;
+}
+.main-img{
+    background-image: url(img1.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 50vw;
+    background-position: center;
+}
+.main-container{
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    padding: 16px;
+    margin-bottom: 80px;
+}
+.submenu{
+    white-space: nowrap;
+    padding-left: 1em;
+}
+.main-contents{
+    width: 690px;
+}
+.main-contents a{ 
+     background-color: #999;
+    color: #fff;
+    text-decoration: none;
+    width: 200px;
+    display: block;
+    text-align: center;
+    padding: 16px;
+    margin: 30px 0 45px; 
+
+} 
+ aside li{
+    padding-top: .5em;
+}
+aside{
+    margin-right: 80px;
+    width: 200px;
+} 
+.footer-nav{ 
+    display: flex;
+    height: 150px;
+    flex-wrap: wrap;
+    padding: 0;
+   
+    margin: 0; 
+ } 
+.footer-nav li{ 
+    width: 50%;
+    list-style: none; 
+    text-align: center;
+    align-items: center;
+    padding: 10px 0;
+}
+.footer-nav a{
+    text-decoration: none;
+}
+.footer-main{
+    text-align: center;
+    
+    color: #fff; 
+}
+.slider li{
+    height: 150px;
+} 
+.slider img{ 
+    height: 100%;
+    
+} 
+.slider{
+    /* これがあると調査のマウスセレクタで画像が選択出来なくなる
+    z-index: -100;  */
+    padding: 0;
+}
+.bg-gray{
+    background-color: #999;
+}
+.bg-black{
+    background-color: #000
+}
+.container{
+    width: 1000px;
+    margin: 0 auto;
+    padding: 16px;
+} 
+#navswitch{
+    display: none;
+}
+@media screen and (max-width:1000px) {
+    .wrap,.main-container,.main-contents,.container,aside{
+        width: 100%;
+    }
+    .main-container{
+        /* display: block; */
+        flex-direction: column-reverse;
+    }
+
+    .iconwrap{
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #000;
+        width: 40px;
+        height: 40px;
+        z-index: 99;
+    }
+    .iconwrap span{
+        border-top: #fff solid 1px;
+        position: absolute;
+        top: 10px;
+        width: 30px;
+        left: 5px;
+    }
+    .iconwrap span:nth-of-type(2){
+        top: 20px;
+    }
+    .iconwrap span:nth-of-type(3){
+        top: 30px;
+    }
+    
+    
+    #navswitch:checked~.header-list{
+        left: 0;
+        
+    }
+    .header-list{
+        display: block;
+        position: fixed;
+        top: 0px;
+        left: -300px;
+        /* width: 200px; */
+        background-color: #aaa;
+        transition: all 0.4s;
+        margin: 0;
+        padding: 3px 10px;
+        z-index: 999;
+    }
+    .li-contact{
+        margin: 10px 0;
+    }    
+    .contact{
+        margin: 0px;
+        padding: 0.5em
+    }
+
+    .footer-nav li{
+        font-size: smaller;
+        padding: 2px;
+    }
+    .footer-nav{
+        height: unset;
+    }
+    .bg-gray .container{
+        padding: 0;
+    }
+    .bg-black .container{
+        padding: 1px;
+    }
+    .footer-main small{
+        font-size: x-small;
+    }
+    .slider li{
+        height: 64px;
+    }
+    .main-container{
+        margin-bottom: 0;
+    }
+    h1{
+        margin: 0;
+        font-size: 32px;
+        margin-right: 147px;
+    }
+
+    .submenu{
+        list-style: none;
+    }
+    aside>ul{
+        display: flex;
+        padding: 0;
+        list-style: none;
+
+    }
+    aside>ul>li{
+        padding-right: 17px;
+        padding-top: 7px;
+    }
+} 
